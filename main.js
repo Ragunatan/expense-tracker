@@ -27,6 +27,8 @@ function fun(event){
 
     })
 
+    
+
      li.textContent = amount + " " + detail + " " + category;
      li.appendChild(deleted)
      li.appendChild(edited)
@@ -41,3 +43,10 @@ function fun(event){
      localStorage.setItem(uniqueid , numbers)
 
  }
+
+ document.getElementById('category','detail','expense').addEventListener('keyup',function(event){
+    if(event.key === 'Enter'){
+        fun(event)
+    }
+    
+})
