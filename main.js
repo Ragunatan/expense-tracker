@@ -10,6 +10,7 @@ function fun(event){
     let li = document.createElement('li');
 
     let deleted = document.createElement('button')
+    deleted.style.marginLeft = '10px';
     deleted.textContent = 'Delete'
     deleted.addEventListener('click' , function(){
         bullet.removeChild(li)
@@ -17,6 +18,7 @@ function fun(event){
 
     let edited = document.createElement('button')
     edited.textContent='Edit'
+    edited.style.marginLeft = '10px';
     edited.addEventListener('click' , function(){
         bullet.removeChild(li);
         document.getElementById('amount').value = amount;
