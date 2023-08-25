@@ -7,6 +7,7 @@ function fun(event){
     let category = document.getElementById('category').value;
 
     let bullet = document.getElementById('lists');
+    let li = document.createElement('li');
 
     let deleted = document.createElement('button')
     deleted.textContent = 'Delete'
@@ -24,8 +25,6 @@ function fun(event){
 
     })
 
-    
-    let li = document.createElement('li');
      li.textContent = amount + " " + detail + " " + category;
      li.appendChild(deleted)
      li.appendChild(edited)
