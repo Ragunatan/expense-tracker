@@ -1,4 +1,3 @@
-
 function fun(event){
     event.preventDefault();
 
@@ -8,18 +7,18 @@ function fun(event){
 
     let bullet = document.getElementById('lists');
     let li = document.createElement('li');
-
+//Make a delete button with functionality
     let deleted = document.createElement('button')
     deleted.style.marginLeft = '10px';
     deleted.textContent = 'Delete'
     deleted.addEventListener('click' , function(){
         bullet.removeChild(li)
     })
-
-    let edited = document.createElement('button')
-    edited.textContent='Edit'
-    edited.style.marginLeft = '10px';
-    edited.addEventListener('click' , function(){
+//make a edit button with edit functionality
+    let editbtn = document.createElement('button')
+    editbtn.textContent='Edit'
+    editbtn.style.marginLeft = '10px';
+    editbtn.addEventListener('click' , function(){
         bullet.removeChild(li);
         document.getElementById('amount').value = amount;
         document.getElementById('detail').value= detail;
@@ -27,11 +26,10 @@ function fun(event){
 
     })
 
-    
 
      li.textContent = amount + " " + detail + " " + category;
      li.appendChild(deleted)
-     li.appendChild(edited)
+     li.appendChild(editbtn)
      
      bullet.appendChild(li)
 
@@ -48,5 +46,4 @@ function fun(event){
     if(event.key === 'Enter'){
         fun(event)
     }
-    
 })
